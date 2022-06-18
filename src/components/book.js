@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function BookItem(props) {
+const BookItem = (props) => {
   const { author, title } = props;
 
   return (
@@ -9,5 +10,12 @@ export default function BookItem(props) {
       {', '}
       {title}
     </li>
-  )
-}
+  );
+};
+
+BookItem.propTypes = {
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default BookItem;
