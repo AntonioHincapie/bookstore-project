@@ -1,4 +1,5 @@
 import React from 'react';
+import BookInput from './bookinput';
 import BooksList from './booklist';
 import NavBar from './navbar';
 
@@ -22,6 +23,7 @@ export default class Books extends React.Component {
           <button type="button">Remove</button>
         </div>
         <BooksList libros={this.state.libros} />
+        <BookInput />
       </div>
     );
   };
