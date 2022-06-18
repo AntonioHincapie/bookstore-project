@@ -14,7 +14,7 @@ export default class Books extends React.Component {
     ]
   };
 
-  render () {  
+  render () {
     return (
       <div>
         <NavBar />

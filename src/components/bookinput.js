@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function BookInput() {
-  return(
+  return (
     <form className="bookinput">
       <input
         type="text"
