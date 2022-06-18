@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BookItem from './book';
 
-export default function BooksList(props) {
+export default function BooksList() {
   const [libros] = useState([{
     key: 1,
     title: 'Hello World!',
@@ -16,9 +16,9 @@ export default function BooksList(props) {
   return (
     <ul>
       {
-        libros.map(libro => (
-          <BookItem 
-            key={libro.key} 
+        libros.map((libro) => (
+          <BookItem
+            key={libro.key}
             author={libro.author}
             title={libro.title}
           />

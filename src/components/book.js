@@ -6,7 +6,7 @@ export default function BookItem(props) {
   return (
     <li>
       {author}
-      {`, `}
+      {', '}
       {title}
     </li>
   )
