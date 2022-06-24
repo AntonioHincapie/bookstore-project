@@ -14,7 +14,7 @@ export default function BookReducer(state = [], action) {
     default:
       return state;
   }
-};
+}
 
 export const AddBook = (title, author) => ({
   type: ADDBOOK,

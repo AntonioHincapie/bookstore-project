@@ -7,7 +7,7 @@ export default function CateReducer(state = [], action) {
     default:
       return state;
   }
-};
+}
 
 export const Check = () => ({
   type: CHECKSTATUS,
