@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 const ADDBOOK = 'bookstore-project/books/ADDBOOK';
 const DELETEBOOK = 'bookstore-project/books/DELETEBOOK';
 
-export default BookReducer = (state = [], action) => {
+export default function BookReducer(state = [], action) {
   switch (action.type) {
     case ADDBOOK:
       return [...state,
@@ -14,7 +14,7 @@ export default BookReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export const AddBook = (title, author) => ({
   type: ADDBOOK,
