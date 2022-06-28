@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import BookItem from './book';
 
 export default function BooksList() {
-  const [libros] = useState([{
-    key: 1,
-    title: 'Hello World!',
-    author: 'Pedro',
-  },
-  {
-    key: 2,
-    title: 'Hola Mundo!',
-    author: 'Juan',
-  }]);
+  const libros = useSelector((state) => state.libros);
 
   return (
     <ul>
       {
         libros.map((libro) => (
           <BookItem
-            key={libro.key}
+            key={libro.id}
             author={libro.author}
             title={libro.title}
+            id={libro.id}
           />
         ))
       }
