@@ -31,6 +31,6 @@ const BookInput = () => {
       <button type="submit">Add Book</button>
     </form>
   );
-}
+};
 
 export default BookInput;

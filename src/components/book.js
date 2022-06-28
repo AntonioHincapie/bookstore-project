@@ -10,12 +10,12 @@ const BookItem = (props) => {
     dispatch(BookToErase(id));
   };
   return (
-    <div className='BookContainer'>
-      <div className='data'>
-        <h4 className='title'>{title}</h4>
-        <h4 className='author'>{author}</h4>
-        <ul className='buttons'>
-          <button type='button' onClick={delHandler}>Delete</button>
+    <div className="BookContainer">
+      <div className="data">
+        <h4 className="title">{title}</h4>
+        <h4 className="author">{author}</h4>
+        <ul className="buttons">
+          <button type="button" onClick={delHandler}>Delete</button>
         </ul>
       </div>
     </div>
