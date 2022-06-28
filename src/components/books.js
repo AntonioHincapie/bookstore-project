@@ -10,7 +10,6 @@ export default function Books() {
       <NavBar />
       <div className="books-headline">
         <h1>Hola</h1>
-        <button type="button">Remove</button>
       </div>
       <BooksList />
       <BookInput />
