@@ -3,7 +3,25 @@ import { v4 as uuidv4 } from 'uuid';
 const ADDBOOK = 'bookstore-project/books/ADDBOOK';
 const DELETEBOOK = 'bookstore-project/books/DELETEBOOK';
 
-export default function BookReducer(state = [], action) {
+const initialState = [
+  {
+    id: uuidv4(),
+    title: 'Hacking con Python',
+    author: 'Daniel Echeverri Montoya',
+  },
+  {
+    id: uuidv4(),
+    title: 'Hacker Épico',
+    author: 'Alejandro Ramos - Rodrigo Yepes',
+  },
+  {
+    id: uuidv4(),
+    title: '100 años de soledad',
+    author: 'Gabriel Garcia Marquez',
+  },
+];
+
+export default function BookReducer(state = initialState, action = {}) {
   switch (action.type) {
     case ADDBOOK:
       return [...state,
