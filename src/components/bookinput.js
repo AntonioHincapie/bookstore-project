@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { AddBook } from '../redux/books/books';
+import { v4 as uuidv4 } from 'uuid';
+import { AddFetchBook } from '../redux/books/books';
 
 const BookInput = () => {
   const dispatch = useDispatch();
@@ -8,9 +9,10 @@ const BookInput = () => {
     e.preventDefault();
     const ValorTitle = e.target.title.value;
     const ValorAuthor = e.target.author.value;
-    const Title = ValorTitle;
-    const Author = ValorAuthor;
-    dispatch(AddBook(Title, Author));
+    const title = ValorTitle;
+    const author = ValorAuthor;
+    const id = uuidv4();
+    dispatch(AddFetchBook({ title, author, id }));
     e.target.reset();
   };
 

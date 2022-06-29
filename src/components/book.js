@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { BookToErase } from '../redux/books/books';
+import { DeleteFetchBook } from '../redux/books/books';
 
 const BookItem = (props) => {
   const dispatch = useDispatch();
-  const { title, author, id } = props;
+  const {
+    title, author, id, category,
+  } = props;
   const delHandler = () => {
-    dispatch(BookToErase(id));
+    dispatch(DeleteFetchBook(id));
   };
   return (
     <div className="BookContainer">
       <div className="data">
         <h4 className="title">{title}</h4>
         <h4 className="author">{author}</h4>
+        <h4 className="type">{category}</h4>
         <ul className="buttons">
           <button type="button" onClick={delHandler}>Delete</button>
         </ul>
