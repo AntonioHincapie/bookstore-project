@@ -6,7 +6,7 @@ const GETBOOK = 'bookstore-project/books/GETBOOK';
 export default function BookReducer(state = [], action = {}) {
   switch (action.type) {
     case GETBOOK:
-      return [...action.books]
+      return [...action.books];
     case ADDBOOK:
       return [...state,
         { title: action.book.title, author: action.book.author, id: action.book.id },
@@ -31,29 +31,29 @@ const BookToErase = (id) => ({
 const GetBook = (books) => ({
   type: GETBOOK,
   books,
-})
+});
 
 export const FetchBook = () => (dispatch) => {
   const List = [];
   fetch(URL, {
     headers: {
       'Content-Type': 'application/json',
-    accept: 'application/json',
+      accept: 'application/json',
     },
   })
-  .then((response) => response.json())
-  .then((result) => {
-    const DataEntry = Object.entries(result);
-    DataEntry.forEach((value) => {
-      List.push({
-        title: value[1][0].title,
-        author: value[1][0].author,
-        category: value[1][0].category,
-        id: value[0],
+    .then((response) => response.json())
+    .then((result) => {
+      const DataEntry = Object.entries(result);
+      DataEntry.forEach((value) => {
+        List.push({
+          title: value[1][0].title,
+          author: value[1][0].author,
+          category: value[1][0].category,
+          id: value[0],
+        });
       });
+      dispatch(GetBook(List));
     });
-    dispatch(GetBook(List));
-  });
 };
 
 export const AddFetchBook = (book) => async (dispatch) => {
@@ -61,7 +61,7 @@ export const AddFetchBook = (book) => async (dispatch) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-    accept: 'application/json',
+      accept: 'application/json',
     },
     body: JSON.stringify(
       {
@@ -83,7 +83,7 @@ export const DeleteFetchBook = (id) => async (dispatch) => {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    accept: 'application/json',
+      accept: 'application/json',
     },
   });
   if (delFecthBook.status === 201) {
