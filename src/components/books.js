@@ -8,9 +8,6 @@ export default function Books() {
   return (
     <div>
       <NavBar />
-      <div className="books-headline">
-        <h1>Hola</h1>
-      </div>
       <BooksList />
       <BookInput />
     </div>

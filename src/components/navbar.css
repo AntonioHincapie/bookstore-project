@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  padding: 2rem 6.2rem;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.8rem;
+}
+
+.nav-links h1 {
+  font-family: var(--monstserrat);
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navlinks a {
+  font-family: var(--monstserrat);
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.813rem;
+  color: var(--black);
+}
+
+.img img {
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  width: 30px;
+  padding: 0.3rem;
+}
