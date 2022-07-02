@@ -33,7 +33,7 @@ const BookInput = () => {
           type="text"
           placeholder="Author"
           required
-          />
+        />
         <select className="addBook">
           <option value="" disabled selected>Category</option>
           <option value="Fiction">Fiction</option>
@@ -42,7 +42,7 @@ const BookInput = () => {
           <option value="Action">Action</option>
           <option value="LifeBased">Life Based</option>
         </select>
-        <button className='inputBtn' type="submit">Add Book</button>
+        <button className="inputBtn" type="submit">Add Book</button>
       </form>
     </div>
   );
